@@ -75,6 +75,10 @@ button:disabled {
   flex-direction: column;
   background: #f8fafc;
   min-height: 0;
+  /* ДОБАВЛЕНО: Разрешаем прокрутку содержимого */
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative; /* Для корректного позиционирования модалок внутри, если нужно */
 }
 
 .chat-area {
@@ -1675,6 +1679,8 @@ button:disabled {
   margin: 0 auto;
   padding: 32px 24px;
   width: 100%;
+  /* ДОБАВЛЕНО: Отступ снизу, чтобы контент не прилипал к футеру или краю */
+  padding-bottom: 60px;
 }
 
 .card {
